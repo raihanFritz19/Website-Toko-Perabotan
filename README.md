@@ -23,4 +23,4 @@ Proyek ini dikembangkan sebagai **proyek pembelajaran / portofolio** dengan mene
 ## 📸 Tampilan Aplikasi
 
 ### Halaman Home
-![Halaman Home]
+![Halaman Home] (admin/assets/img/WhatsApp Image 2025-12-16 at 20.47.53.jpeg)
