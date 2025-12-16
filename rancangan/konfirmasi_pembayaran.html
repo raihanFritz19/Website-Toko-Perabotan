@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Pembayaran</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+    .container {
+        margin-top: 80px;
+    }
+    .header {
+        background-color: #f8f8f8;
+        padding: 10px 50px; /* Ubah padding kiri dan kanan disini */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+    .nav a {
+        margin: 0 8px;
+        text-decoration: none;
+        color: #333;
+        padding: 5px 10px;
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    .search input[type="text"] {
+        padding: 5px;
+        width: 200px;
+        margin-right: 5px;
+    }
+    .search button {
+        padding: 5px 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .search button:hover {
+        background-color: #0056b3;
+    }
+    .table {
+        margin-top: 30px; /* Ubah margin-top disini */
+    }
+    .table th, .table td {
+        text-align: center;
+    }
+    .btn-nota {
+        background-color: #00bfff;
+        color: white;
+    }
+    .btn-input-pembayaran {
+        background-color: #28a745;
+        color: white;
+    }
+    .form-container {
+        margin-top: 50px;
+    }
+    .form-group label {
+        font-weight: bold;
+    }
+    .form-group .form-control {
+        margin-bottom: 10px;
+    }
+    .form-group .btn {
+        margin-top: 10px;
+    }
+    .total-tagihan {
+        background-color: #d9edf7;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid #bce8f1;
+        border-radius: 4px;
+        color: #31708f;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Keranjang</a>
+            <a href="#">Riwayat Belanja</a>
+            <a href="#">Logout</a>
+            <a href="#">Checkout</a>
+            <a href="#">Tentang Kami</a>
+        </div>
+        <div class="search">
+            <input type="text">
+            <button>Cari</button>
+        </div>
+    </div>
+    <div class="container form-container">
+        <h2>Konfirmasi Pembayaran</h2>
+        <p>Kirim bukti pembayaran Anda di sini</p>
+        <div class="total-tagihan">Total tagihan Anda Rp.</div>
+        <form>
+            <div class="form-group">
+                <label for="nama">Nama Penyetor</label>
+                <input type="text" class="form-control" id="nama" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="bank">Bank</label>
+                <input type="text" class="form-control" id="bank" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="jumlah">Jumlah</label>
+                <input type="number" class="form-control" id="jumlah" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="bukti">Foto Bukti</label>
+                <input type="file" class="form-control" id="bukti">
+                <small class="form-text text-muted">Foto bukti harus JPG maksimal 2MB</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

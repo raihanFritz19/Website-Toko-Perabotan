@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahaya Perabotan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #050404;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar .header {
+            background-color: #d50000;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+        .sidebar .header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .sidebar .logo {
+            padding: 20px 0;
+        }
+        .sidebar .logo img {
+            width: 100px;
+            height: auto;
+        }
+        .sidebar a {
+            width: 100%;
+            color: white;
+            padding: 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .main {
+            margin-left: 250px;
+            padding: 20px;
+            flex: 1;
+            width: calc(100% - 250px);
+        }
+        .top-bar {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 250px;
+            right: 0;
+            z-index: 1;
+        }
+        .top-bar .logout {
+            background-color: #d50000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .content {
+            padding-top: 60px;
+        }
+        .content h1 {
+            color: #111010;
+            text-align: left;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .table-container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .table-container h2 {
+            color: #db1717;
+            margin-bottom: 12px;
+            font-size: 30px;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            color: #100f0f;
+            margin-bottom: 12px;
+            font-size: 24px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .form-group label {
+            margin-right: 10px;
+        }
+        .form-group input {
+            width: 200px;
+            margin-right: 10px;
+        }
+        .form-group button {
+            margin-left: 10px;
+        }
+        table img {
+            width: 50px;
+            height: auto;
+        }
+        table .btn {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="header">
+            <h2>Cahaya<br>Perabotan</h2>
+        </div>
+        <div class="logo">
+            <img src="https://via.placeholder.com/100" alt="Logo">
+        </div>
+        <a href="#">Home</a>
+        <a href="#">Kategori</a>
+        <a href="#">Produk</a>
+        <a href="#">Penjualan</a>
+        <a href="#">Laporan</a>
+        <a href="#">Pelanggan</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <div class="top-bar">
+        <h1></h1>
+        <a href="#" class="logout">Logout</a>
+    </div>
+
+    <div class="main">
+        <div class="content">
+            <div class="table-container">
+                <h2>Data Produk</h2>
+                <div class="form-group">
+                    <label for="cariStok">Cari Stok:</label>
+                    <input type="text" class="form-control" id="cariStok" placeholder="Cari Stok">
+                    <button class="btn btn-primary">Cari</button>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Kategori</th>
+                            <th>Nama</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
+                            <th>Berat</th>
+                            <th>Foto</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Kategori Produk</td>
+                            <td>Nama Produk</td>
+                            <td>Harga Produk</td>
+                            <td>Stok Produk</td>
+                            <td>Berat Produk</td>
+                            <td><img src="https://via.placeholder.com/50" alt="Foto Produk"></td>
+                            <td>
+                                <button class="btn btn-danger btn-sm">Hapus</button>
+                                <button class="btn btn-warning btn-sm">Ubah</button>
+                                <button class="btn btn-info btn-sm">Detail</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

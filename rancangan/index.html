@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Cahaya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #f8f8f8;
+            padding: 20px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header .logo img {
+            height: 50px; /* Ukuran logo diperkecil */
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav a {
+            margin: 0 8px;
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+        }
+
+        .search {
+            margin-left: auto;
+        }
+
+        .search input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        .search button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search button:hover {
+            background-color: #0056b3;
+        }
+
+        .banner {
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .banner img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product .item {
+            width: 22%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product .item p {
+            margin: 10px 0;
+        }
+
+        .product .item button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .footer .social a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50" alt="Toko Cahaya Logo">
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Keranjang</a>
+            <a href="#">Login</a>
+            <a href="#">Daftar</a>
+            <a href="#">Checkout</a>
+            <a href="#">Tentang Kami</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Cari produk...">
+            <button>Cari</button>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="https://via.placeholder.com/250" alt="Banner Toko Cahaya">
+    </div>
+
+    <div class="content">
+        <h2>Produk Terbaru</h2>
+        <div class="product">
+            <div class="item">
+                <img src="https://via.placeholder.com/100">
+                <p>Panci Stainless Steel Merek Zebra</p>
+                <div>
+                    <button class="beli">Beli</button>
+                    <button class="detail">Detail</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/100">
+                <p>Wajan Kuali Stainless Steel Gagang Satu</p>
+                <div>
+                    <button class="beli">Beli</button>
+                    <button class="detail">Detail</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/100">
+                <p>Loyang Kue Lapis Aluminium</p>
+                <div>
+                    <button class="beli">Beli</button>
+                    <button class="detail">Detail</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/100">
+                <p>Sikat Closet Lionstar/ Sikat Bulat Lion Star</p>
+                <div>
+                    <button class="beli">Beli</button>
+                    <button class="detail">Detail</button>
+                </div>
+            </div>
+            <div class="item">
+               <img src="https://via.placeholder.com/100">
+               <p>Piring Keramik Putih</p>
+               <div>
+                   <button class="beli">Beli</button>
+                   <button class="detail">Detail</button>
+               </div>
+           </div>
+           <div class="item">
+               <img src="https://via.placeholder.com/100">
+               <p>Sapu Rumah</p>
+               <div>
+                   <button class="beli">Beli</button>
+                   <button class="detail">Detail</button>
+               </div>
+          </div>
+          <div class="item">
+            <img src="https://via.placeholder.com/100">
+            <p>Pel Lantai</p>
+            <div>
+                <button class="beli">Beli</button>
+                <button class="detail">Detail</button>
+            </div>
+       </div>
+       <div class="item">
+        <img src="https://via.placeholder.com/100">
+        <p>Sendok Masak</p>
+        <div>
+            <button class="beli">Beli</button>
+            <button class="detail">Detail</button>
+        </div>
+   </div>
+          
+ 

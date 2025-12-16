@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahaya Perabotan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #050404;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            color: white;
+            padding-top: 10px;
+        }
+        .sidebar .header {
+            background-color: #d50000;
+            text-align: center;
+            padding: 1px 1px;
+        }
+        .sidebar .header h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .sidebar .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+        }
+        .sidebar .logo img {
+            width: 100px;
+            height: auto;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .sidebar .active {
+            background-color: #d50000;
+        }
+        .main {
+            margin-left: 250px;
+            flex: 1;
+            padding: 20px;
+            align-items: center;
+        }
+        .top-bar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 250px;
+            right: 0;
+        }
+        .top-bar .logout {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .content {
+            margin-top: 60px; /* Offset for the fixed top-bar */
+        }
+        .content h1 {
+            color: red;
+            font-size: 24px;
+        }
+        .filter {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-end;
+        }
+        .filter div {
+            display: flex;
+            flex-direction: column;
+        }
+        .filter label {
+            margin-bottom: 5px;
+        }
+        .filter input,
+        .filter select,
+        .filter button {
+            padding: 5px;
+            width: 260px; /* Setting the width for input, select */
+        }
+        .filter button {
+            width: 50px; /* Setting the width for the button */
+        }
+        table {
+            width: 98%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th, td {
+            padding: 5px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .action-buttons button {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="header">
+            <h2>Cahaya<br>Perabotan</h2>
+        </div>
+        <div class="logo">
+            <img src="https://via.placeholder.com/100" alt="Logo">
+        </div>
+        <a href="#">Home</a>
+        <a href="#">Kategori</a>
+        <a href="#">Produk</a>
+        <a href="#">Penjualan</a>
+        <a href="#">Laporan</a>
+        <a href="#">Pelanggan</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <div class="top-bar">
+        <a href="logout.php" class="logout">Logout</a>
+    </div>
+
+    <div class="main">
+        <div class="content">
+            <h1>Laporan Penjualan dari hingga</h1>
+            <div class="filter">
+                <div>
+                    <label for="startDate">Tanggal Mulai</label>
+                    <input type="text" id="startDate" placeholder="dd/mm/yyyy">
+                </div>
+                <div>
+                    <label for="endDate">Tanggal Selesai</label>
+                    <input type="text" id="endDate" placeholder="dd/mm/yyyy">
+                </div>
+                <div>
+                    <label for="status">Status</label>
+                    <select id="status">
+                        <option value="">Pilih Status</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="btn btn-primary">Lihat</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Pelanggan</th>
+                        <th>Tanggal</th>
+                        <th>Jumlah</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="action-buttons">
+                            <button class="btn btn-info btn-sm">Detail</button>
+                            <button class="btn btn-success btn-sm">Pembayaran</button>
+                            <button class="btn btn-danger btn-sm">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                         <td colspan="3">Total</td>
+                         <td>Rp. 0</td>
+                         <td></td>
+                         <td></td>
+                     </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#startDate, #endDate").datepicker({
+                dateFormat: "dd/mm/yy"
+            });
+        });
+    </script>
+</body>
+</html>

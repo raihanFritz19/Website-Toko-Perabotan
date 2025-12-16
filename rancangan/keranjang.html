@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 100px;
+        }
+        .navbar-nav > li > a {
+            padding: 15px 20px;
+        }
+        .navbar-right > li > a {
+            padding: 15px 20px;
+        }
+        .btn-danger {
+            padding: 5px 10px;
+        }
+        .navbar-form {
+            margin-top: 8px;
+        }
+        .form-control {
+            width: 200px;
+        }
+        .header {
+            background-color: #f8f8f8;
+            padding: 10px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+        .nav a {
+            margin: 0 8px;
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        .search input[type="text"] {
+            padding: 5px;
+            width: 200px;
+            margin-right: 5px;
+        }
+        .search button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Keranjang</a>
+            <a href="#">Riwayat Belanja</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Logout</a>
+            <a href="#">Checkout</a>
+        </div>
+        <div class="search">
+            <input type="text">
+            <button>Cari</button>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Keranjang Belanja</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Produk</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Subharga</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Produk1</td>
+                    <td>Harga1</td>
+                    <td>1</td>
+                    <td>Subharga1</td>
+                    <td><button class="btn btn-danger">Hapus</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Produk2</td>
+                    <td>Harga2</td>
+                    <td>1</td>
+                    <td>Subharga2</td>
+                    <td><button class="btn btn-danger">Hapus</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-default">Lanjutkan Belanja</button>
+        <button class="btn btn-primary">Checkout</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

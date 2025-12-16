@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahaya Perabotan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #050404;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            color: white;
+        }
+        .sidebar .header {
+            background-color: #d50000;
+            padding: 20px;
+            text-align: center;
+        }
+        .sidebar .header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .sidebar .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .sidebar .logo img {
+            width: 100px;
+            height: auto;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .main {
+            margin-left: 250px;
+            padding: 20px;
+            padding-top: 60px; /* Add padding here */
+            flex: 1;
+        }
+        .main h1 {
+            color: #333;
+        }
+        .top-bar {
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 250px;
+            right: 0;
+        }
+        .top-bar .title {
+            margin: 0;
+        }
+        .top-bar .logout {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        .form-group .btn-tambah {
+            background-color: #2475cb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 8px 16px;
+            margin-top: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 5px;
+        }
+        .content h1 {
+            color: red;
+            text-align: left;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .form-group-file {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 5px;
+            display: inline-block;
+        }
+        .form-group-foto {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="header">
+            <h2>Cahaya<br> 
+                Perabotan</h2>
+        </div>
+        <div class="logo">
+            <img src="https://via.placeholder.com/100" alt="Logo">
+        </div>
+        <a href="administrator.php">Home</a>
+        <a href="kategori.php">Kategori</a>
+        <a href="produk.php">Produk</a>
+        <a href="penjualan.php">Penjualan</a>
+        <a href="laporan.php">Laporan</a>
+        <a href="pelanggan.php">Pelanggan</a>
+        <a href="logout.php">Logout</a>
+    </div>
+
+    <div class="top-bar">
+        <h1 class="title"></h1>
+        <a href="logout.php" class="logout">Logout</a>
+    </div>
+
+    <div class="main">
+        <div class="content">
+            <h1>Tambah Produk</h1>
+            <form>
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select class="form-control" id="kategori">
+                        <option>Pilih Kategori</option>
+                        <!-- Add options here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" class="form-control" id="nama">
+                </div>
+                <div class="form-group">
+                    <label for="harga">Harga (Rp)</label>
+                    <input type="number" class="form-control" id="harga">
+                </div>
+                <div class="form-group">
+                    <label for="berat">Berat (Gr)</label>
+                    <input type="number" class="form-control" id="berat">
+                </div>
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea class="form-control" id="deskripsi" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="foto">Foto</label>
+                    <div class="form-group-foto">
+                        <input type="file" class="form-control-file" id="foto">
+                    </div>
+                    <button type="button" class="btn-tambah">+</button>
+                </div>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

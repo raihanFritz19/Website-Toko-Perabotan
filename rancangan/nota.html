@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pembelian</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+    .container {
+        margin-top: 100px;
+    }
+    .header {
+        background-color: #f8f8f8;
+        padding: 10px 50px; /* Ubah padding kiri dan kanan disini */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+    .nav a {
+        margin: 0 8px;
+        text-decoration: none;
+        color: #333;
+        padding: 5px 10px;
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    .search input[type="text"] {
+        padding: 5px;
+        width: 200px;
+        margin-right: 5px;
+    }
+    .search button {
+        padding: 5px 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .search button:hover {
+        background-color: #0056b3;
+    }
+    .details {
+        margin-top: 50px; /* Ubah margin-top disini */
+    }
+    .details th, .details td {
+        text-align: center;
+    }
+    .details td.align-left {
+        text-align: left; /* Ubah align text ke kiri */
+    }
+    .btn-nota {
+        background-color: #00bfff;
+        color: white;
+    }
+    .btn-input-pembayaran {
+        background-color: #28a745;
+        color: white;
+    }
+    .form-container {
+        margin-top: 50px;
+    }
+    .form-group label {
+        font-weight: bold;
+    }
+    .form-group .form-control {
+        margin-bottom: 10px;
+    }
+    .form-group .btn {
+        margin-top: 10px;
+    }
+    .total-tagihan {
+        background-color: #d9edf7;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid #bce8f1;
+        border-radius: 1px;
+        color: #31708f;
+        font-weight: bold;
+        text-align: left; /* Pusatkan teks di dalam kotak biru */
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Keranjang</a>
+            <a href="#">Riwayat Belanja</a>
+            <a href="#">Logout</a>
+            <a href="#">Checkout</a>
+            <a href="#">Tentang Kami</a>
+        </div>
+        <div class="search">
+            <input type="text">
+            <button>Cari</button>
+        </div>
+    </div>
+    <div class="container details">
+        <h2 style="margin-top: 30px;">Detail Pembelian</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Pembelian</h4>
+                <p>No. Pembelian: 000</p>
+                <p>Tanggal: 2024-07-22</p>
+                <p>Total: Rp.00,000</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Pelanggan</h4>
+                <p>Nama</p>
+                <p>No hp</p>
+                <p>Akun</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Pengiriman</h4>
+                <p>Kota</p>
+                <p>Ongkos Kirim: Rp.00,000</p>
+                <p>Alamat</p>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Produk</th>
+                    <th>Harga</th>
+                    <th>Berat</th>
+                    <th>Jumlah</th>
+                    <th>Subberat</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="align-left">Produk 1</td>
+                    <td>Harga Produk</td>
+                    <td>berat produk</td>
+                    <td>2</td>
+                    <td>subberat produk</td>
+                    <td>subtotal Harga produk</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total-tagihan">
+            BANK  000-0000-000. Nama Pemilik ke<br>
+            Silahkan melakukan pembayaran Rp. 
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

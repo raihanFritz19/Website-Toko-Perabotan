@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 100px;
+        }
+        .navbar-nav > li > a {
+            padding: 15px 20px;
+        }
+        .navbar-right > li > a {
+            padding: 100px 20px;
+        }
+        .btn-danger {
+            padding: 5px 10px;
+        }
+        .navbar-form {
+            margin-top: 8px;
+        }
+        .header {
+            background-color: #f8f8f8;
+            padding: 10px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+        .nav a {
+            margin: 0 8px;
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        .search input[type="text"] {
+            padding: 5px;
+            width: 200px;
+            margin-right: 5px;
+        }
+        .search button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search button:hover {
+            background-color: #0056b3;
+        }
+        .form-group-inline {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-group-inline label {
+            margin-right: 20px;
+            flex: 0 80 100px;
+        }
+        .form-group-inline input,
+        .form-group-inline select {
+            flex: 1;
+        }
+        .form-group-inline input,
+        .form-group-inline select {
+            margin-right: 20px;
+            height: 34px;
+        }
+        .form-group textarea {
+            width: 100%;
+        }
+        .form-control {
+            height: 34px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Keranjang</a>
+            <a href="#">Riwayat Belanja</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Logout</a>
+            <a href="#">Checkout</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="">
+            <button>Cari</button>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Keranjang Belanja</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Produk</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Subharga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Produk1</td>
+                    <td>Harga1</td>
+                    <td>2</td>
+                    <td>Subharga1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Produk2</td>
+                    <td>Harga2</td>
+                    <td>2</td>
+                    <td>Subharga2</td>
+                </tr>
+                <tr>
+                    <th colspan="4">Total Belanja</th>
+                    <th>Subtotal</th>
+                </tr>
+            </tbody>
+        </table>
+        <form>
+          <div class="col-md-250">
+            <div class="form-group-inline">
+                <label for="name"></label>
+                <input type="text" class="form-control" id="name" placeholder="Reza" required>
+                <label for="zip"></label>
+                <input type="text" class="form-control" id="zip" placeholder="12321" required>
+                <label for="shipping"></label>
+                <select class="form-control" id="shipping" required>
+                    <option value="" disabled selected>Pilih Ongkos Kirim</option>
+                    <option value="jne">JNE</option>
+                    <option value="tiki">TIKI</option>
+                    <option value="pos">POS Indonesia</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Alamat Lengkap Pengiriman:</label>
+                <textarea class="form-control" id="address" rows="3" placeholder="Masukan alamat lengkap pengiriman (termasuk kode pos)" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Checkout</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

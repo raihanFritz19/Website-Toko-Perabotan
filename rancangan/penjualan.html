@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahaya Perabotan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #050404;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            color: white;
+        }
+        .sidebar .header {
+            background-color: #d50000;
+            padding: 1px;
+            text-align: center;
+        }
+        .sidebar .header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .sidebar .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .sidebar .logo img {
+            width: 100px;
+            height: auto;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .main {
+            margin-left: 250px;
+            padding: 20px;
+            padding-top: 90px; /* Add padding here */
+            flex: 1;
+        }
+        .top-bar {
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 250px;
+            right: 0;
+            z-index: 1;
+        }
+        .top-bar .logout {
+            background-color: #d50000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 1px;
+            margin-right: 40px; /* Move logout button to the left by 40px */
+        }
+        .content h1 {
+            color: red;
+            text-align: left;
+            padding: 0px;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .table {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .table th, .table td {
+            vertical-align: middle !important;
+        }
+        .btn {
+            margin: 0 5px;
+        }
+        .btn-action {
+            height: 40px; /* Set height to 40px */
+            font-size: 14px; /* Adjust font size if necessary */
+            padding: 10px 12px; /* Adjust padding to fit the height */
+        }
+        .btn-action:not(:last-child) {
+            margin-right: 1px; /* Add margin between buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="header">
+            <h2>Cahaya<br>Perabotan</h2>
+        </div>
+        <div class="logo">
+            <img src="https://via.placeholder.com/100" alt="Logo">
+        </div>
+        <a href="#">Home</a>
+        <a href="#">Kategori</a>
+        <a href="#">Produk</a>
+        <a href="#">Penjualan</a>
+        <a href="#">Laporan</a>
+        <a href="#">Pelanggan</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <div class="top-bar">
+        <h1></h1>
+        <a href="#" class="logout">Logout</a>
+    </div>
+
+    <div class="main">
+        <div class="content">
+            <h1>Data Penjualan</h1>
+            <form class="form-inline mb-6">
+                <label for="status" class="mr-2">Filter by Status Data Penjualan:</label>
+                <select class="form-control mr-6" id="status">
+                    <option>All</option>
+                    <option>barang dikirim</option>
+                    <option>lunas</option>
+                </select>
+                <button type="button" class="btn btn-primary">Filter</button>
+            </form>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Pelanggan</th>
+                            <th>Tanggal</th>
+                            <th>Status Pembelian</th>
+                            <th>Total</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nama Pelanggan</td>
+                            <td>Tanggal</td>
+                            <td>Status Pembelian</td>
+                            <td>Total</td>
+                            <td>
+                                <button class="btn btn-info btn-sm btn-action">Detail</button>
+                                <button class="btn btn-success btn-sm btn-action">Pembayaran</button>
+                                <button class="btn btn-danger btn-sm btn-action">Hapus</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
