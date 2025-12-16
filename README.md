@@ -20,9 +20,7 @@ Proyek ini dikembangkan sebagai **proyek pembelajaran / portofolio** dengan mene
 - Framework **CodeIgniter**
 - MySQL
 
-## 📸 Tampilan Aplikasi
 
-### Halaman Home
-![Halaman Home] (admin/assets/img/WhatsApp Image 2025-12-16 at 20.47.53.jpeg)
-![Halaman Home](admin/assets/img/WhatsApp%20Image%202025-12-16%20at%2020.47.53.jpeg)
+
+
 
