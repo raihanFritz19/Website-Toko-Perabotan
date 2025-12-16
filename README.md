@@ -20,4 +20,7 @@ Proyek ini dikembangkan sebagai **proyek pembelajaran / portofolio** dengan mene
 - Framework **CodeIgniter**
 - MySQL
 
+## 📸 Tampilan Aplikasi
 
+### Halaman Home
+![Halaman Home]
