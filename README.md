@@ -1,4 +1,4 @@
-# 🛒 Website Toko Perabotan Rumah Tangga
+# 🛒 Website Toko Penjualan Perabotan Rumah Tangga
 
 Website aplikasi penjualan perabotan rumah tangga berbasis web yang dibuat untuk memudahkan proses pemesanan dan pengelolaan transaksi secara online.
 
