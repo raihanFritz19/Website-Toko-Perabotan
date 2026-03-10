@@ -1,4 +1,4 @@
-![Project Screenshot](images/Toko Cahaya.png)
+![Project Screenshot](image/Toko Cahaya.png)
 # 🛒 Website Toko Penjualan Perabotan Rumah Tangga
 Website aplikasi penjualan perabotan rumah tangga berbasis web yang dibuat untuk memudahkan proses pemesanan dan pengelolaan transaksi secara online.
 
