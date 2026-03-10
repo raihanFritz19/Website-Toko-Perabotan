@@ -1,5 +1,5 @@
+![Project Screenshot](images/Toko Cahaya.png)
 # 🛒 Website Toko Penjualan Perabotan Rumah Tangga
-
 Website aplikasi penjualan perabotan rumah tangga berbasis web yang dibuat untuk memudahkan proses pemesanan dan pengelolaan transaksi secara online.
 
 Proyek ini dikembangkan sebagai **proyek pembelajaran / portofolio** dengan menerapkan konsep website dinamis dan sistem transaksi sederhana.
